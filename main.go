@@ -41,14 +41,7 @@ func main() {
 	// Cleanly close down the Discord session.
 	gaymerBot.Close()
 }
-func StartGaymerBot(t string) *discordgo.Session {
-	b, err := discordgo.New("Bot " + t)
-	if err != nil {
-		fmt.Println("error creating Discord session,", err)
 
-	}
-	return b
-}
 func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 	// Ignore all messages created by the bot itself
 	// This isn't required in this specific example but it's a good practice.
